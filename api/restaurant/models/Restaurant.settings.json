@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "restaurant",
+  "info": {
+    "name": "restaurant",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "dishes": {
+      "collection": "dish",
+      "via": "restaurant"
+    }
+  }
+}
